@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamilyLens</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #006699;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 35px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            text-align: left;
+            margin: 20px 10%;
+        }
+
+        h2 {
+            color: #006699;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h3 {
+            color: #8467D7;
+            font-size: 25px;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: normal;
+            margin: 10px 0;
+        }
+
+        #banner {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        #c1 {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Container to hold the cards */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between cards */
+        }
+
+        .Cards {
+            width: 300px;
+            height: 400px; /* Fixed height for uniform card size */
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .Cards:hover {
+            transform: translateY(-10px);
+        }
+
+        .image {
+            height: 60%; /* Adjust height of the image container */
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the container without distortion */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .title {
+            background-color: #006699;
+            padding: 10px;
+            flex-shrink: 0;
+        }
+
+        .Cards button {
+            color: #ffffff;
+            background-color: #ff6699;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .Cards button:hover {
+            background-color: #ff3366;
+        }
+
+        .Cards .title h5 {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .Cards {
+                width: 90%; /* Make cards full-width on smaller screens */
+            }
+
+            h1, p {
+                text-align: center;
+                margin: 10px 5%;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#" class="logo">FamilyLens</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Banner Image -->
+    <div id="banner-container">
+        <img id="banner" src="static/banner.jpg" alt="FamilyLens Banner">
+    </div>
+
+    <!-- Description Section -->
+    <div class="description">
+        <p>Welcome to FamilyLens, the world's first family photo sharing site. Here, we celebrate the beauty of family bonds by capturing and sharing cherished moments. Whether it's a special occasion or just everyday life, FamilyLens is the perfect place to keep your memories alive and connect with your loved ones.</p>
+    </div>
+
+    <div id="c1">
+        <h2>Discover More</h2> 
+        <h3>Explore popular destinations</h3>  
+
+        <!-- Container holding all the cards -->
+        <div class="cards-container">
+            <div class="Cards">
+                <div class="image">
+                    <img id="card_image" src="static/Tower.jpg" alt="Tower Bridge">
+                </div>
+                <div class="title">
+                    <h5>Tower Bridge</h5>
+                </div>
+                <button>Explore...</button>
+            </div>
+
+            <div class="Cards">
+                <div class="image">
+                    <img id="card_image" src="static/pl.jpg" alt="Bukigam palace">
+                </div>
+                <div class="title">
+                    <h5>Bukigam Palace</h5>
+                </div>
+                <button>Explore...</button>
+            </div>
+
+            <div class="Cards">
+                <div class="image">
+                    <img id="card_image" src="static/bn.jpg" alt="Big Ben">
+                </div>
+                <div class="title">
+                    <h5>Big Ben</h5>
+                </div>
+                <button>Explore...</button>
+            </div>
+
+            <div class="Cards">
+                <div class="image">
+                    <img id="card_image" src="static/eye.jpg" alt="London Eye">
+                </div>
+                <div class="title">
+                    <h5>London Eye</h5>
+                </div>
+                <button>Explore...</button>
+            </div>
+        </div>
+    </div>
+</body> 
+</html>

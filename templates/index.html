@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamilyLens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Link to CSS file -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#"><img src="{{ url_for('static', filename='familylens_logo.png') }}" alt="FamilyLens Logo" class="logo-img"></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Banner Image -->
+    <div id="banner-container">
+        <img id="banner" src="{{ url_for('static', filename='banner.jpg') }}" alt="FamilyLens Banner">
+    </div>
+
+    <!-- Description Section -->
+    <div class="description">
+        <p>Welcome to FamilyLens, the world's first family photo sharing site. Here, we celebrate the beauty of family bonds by capturing and sharing cherished moments. Whether it's a special occasion or just everyday life, FamilyLens is the perfect place to keep your memories alive and connect with your loved ones.</p>
+    </div>
+
+    <div id="c1">
+        <h2>Discover More</h2> 
+        <h3>Explore popular destinations</h3>  
+
+        <!-- Container holding all the cards -->
+        <div class="cards-container">
+            <div class="Cards">
+                <div class="image">
+                    <img id="card_image" src="{{ url_for('static', filename='Tower.jpg') }}" alt="Tower Bridge">
+                </div>
+                <div class="title">
+                    <h5>Tower Bridge</h5>
+                </div>
+                <button>Explore...</button>
+            </div>
+
+            <div class="Cards">
+                <div class="image">
+                    <img id="card_image" src="{{ url_for('static', filename='pl.jpg') }}" alt="Bukigam palace">
+                </div>
+                <div class="title">
+                    <h5>Bukigam Palace</h5>
+                </div>
+                <button>Explore...</button>
+            </div>
+
+            <div class="Cards">
+                <div class="image">
+                    <img id="card_image" src="{{ url_for('static', filename='bn.jpg') }}" alt="Big Ben">
+                </div>
+                <div class="title">
+                    <h5>Big Ben</h5>
+                </div>
+                <button>Explore...</button>
+            </div>
+
+            <div class="Cards">
+                <div class="image">
+                    <img id="card_image" src="{{ url_for('static', filename='eye.jpg') }}" alt="London Eye">
+                </div>
+                <div class="title">
+                    <h5>London Eye</h5>
+                </div>
+                <button>Explore...</button>
+            </div>
+        </div>
+    </div>
+</body> 
+</html>
